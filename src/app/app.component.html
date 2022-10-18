@@ -14,11 +14,12 @@
       </ol>
     </div>
     <hr>
-    <app-game-control (gameStarted)="onNumberEmmited($event)">
-      <div *ngFor="let num of numbers">
-        <app-even *ngIf="num % 2 === 0" [evenNumber]="num"></app-even>
-        <app-odd *ngIf="num % 2 === 1" [oddNumber]="num"></app-odd>
-      </div>
-    </app-game-control>
+    <app-game-control
+      (gameStarted)="onNumberEmmited($event)"
+    ></app-game-control>
+    <div *ngFor="let num of numbers">
+      <app-even *ngIf="num % 2 === 0" [evenNumber]="num"></app-even>
+      <app-odd *ngIf="num % 2 === 1" [oddNumber]="num"></app-odd>
+    </div>
   </div>
 </div>
